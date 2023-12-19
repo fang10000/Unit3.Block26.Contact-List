@@ -2,9 +2,10 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 
-import { useState } from 'react';
+import { useState} from 'react';
 import './App.css';
 import ContactList from './components/ContactList';
+import SelectedContact from './components/SelectedContact';
 
 
 
@@ -15,7 +16,7 @@ function App() {
   return (
     <>
       {selectedContactId ? (
-        <div> Selected Contact View </div>
+      <SelectedContact selectedContactId = { selectedContactId}  setSelectedContactId = {setSelectedContactId } />
       ) : (
       <ContactList setSelectedContactId={setSelectedContactId}  />
       )}

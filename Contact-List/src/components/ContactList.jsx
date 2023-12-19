@@ -1,7 +1,6 @@
 import React from "react";
 import ContactRow from "./ContactRow";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 // const dummyContacts = [
 //   { id: 1, name: "R2-D2", phone: "222-222-2222", email: "r2d2@droids.com" },
@@ -35,7 +34,7 @@ export default function ContactList({ setSelectedContactId }) {
     <table>
       <thead>
         <tr>
-          <th colSpan="3">Contact List</th>
+          <th colSpan="3">Contact List (click each row to see details)</th>
         </tr>
       </thead>
       <tbody>
