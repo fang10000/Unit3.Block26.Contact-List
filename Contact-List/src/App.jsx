@@ -2,17 +2,25 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 
-import { useState } from 'react'
-import './App.css'
-import ContactList from './components/ContactList.jsx'
+import { useState } from 'react';
+import './App.css';
+import ContactList from './components/ContactList';
+
+
 
 function App() {
 
+  const [selectedContactId, setSelectedContactId] = useState(null);
+
   return (
     <>
-      <ContactList />
+      {selectedContactId ? (
+        <div> Selected Contact View </div>
+      ) : (
+      <ContactList setSelectedContactId={setSelectedContactId}  />
+      )}
     </>
-  )
+  );
 }
 
 export default App
